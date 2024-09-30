@@ -1,19 +1,29 @@
 const rootDiv = document.getElementById('root');
 
-function renderSignUp(){
+function renderSignUp() {
     rootDiv.innerHTML = `
+    <style>buttom { background-color: #04AA6D; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    }
+    </style>
+
     <h1>Sign Up</h1>
-    <form id = "signupForm">
-        <label for = "name">Name:</label>
-        <input id = "name" type = "text" placeholder = "Enter your name"></input><br>
-        <label for = "email">Email:</label>
-        <input id = "email" type = "email" placeholder = "Enter your email"></input><br>
-        <label for ="password">Password:</label>
-        <input id = "password" type = "password" placeholder ="Enter your password"></input><br>
-        <buttom type = "buttom" onclick = "handleSignUp()">Sign Up</buttom>
-    
-    </form>
-   `; 
+    <form id="signupForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Enter your name"><br>
+        <label for="email">Email:</label>
+        <input type="text" id="email" placeholder="Enter your email"><br>
+        <label for="password">Password:</label>
+        <input type="text" id="password" placeholder="Enter your password"><br>
+        <buttom type="buttom" onclick="handleSignUp()">Sign Up</buttom>
+        </form>
+    `;
 }
 
 renderSignUp()
@@ -34,13 +44,23 @@ function handleSignUp(){
 
 function renderHomePage(){
     rootDiv.innerHTML = `
-    <h1>Welcome, ${userName}!</h1>
-    <h2>Create a Post</h2>
-    <textarea id="postContent" placeholder = "What's on your mind?"></textarea><br>
-    <button type = "button" onclick = "handleCreatePost()">Post</button>
-    <h3>Your Posts</h3>
-    <ul id="postList"></ul>
-    
+        <style>buttom { background-color: #04AA6D; /* Green */
+         border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        }
+        </style>
+
+        <h1>Welcome, ${userName}!<h1>
+        <h2>Create a Post</h2>
+        <textarea id="postContent" placeholder="What's on your mind?"></textarea><br>
+        <buttom type="buttom" onclick="handleCreatePost()">Post</buttom>
+        <h3>Your Posts</h3>
+        <ul id="postList"></ul>
     `;
 }
 
